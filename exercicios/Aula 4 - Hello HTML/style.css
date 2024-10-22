@@ -94,6 +94,10 @@ section.About p {
   cursor: pointer
 }
 
+.social .icon svg {
+  fill: #282828;
+}
+
 .social .icon svg.icon:hover {
   transform: scale(1.1);
   fill: #0077b5;
