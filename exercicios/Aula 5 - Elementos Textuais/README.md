@@ -1,6 +1,6 @@
-# Exercicio Hello HTML (Página de Apresentação pessoal com deploy)
+# Exercicio Elementos Textuais (Página de noticías com deploy)
 
-<h1><a href="https://helloniel.netlify.app" target="_blank">Link Deploy 🌐</a></h1>
+<h1><a href="https://nielnews.netlify.app" target="_blank">Link Deploy 🌐</a></h1>
 
 ---
 
