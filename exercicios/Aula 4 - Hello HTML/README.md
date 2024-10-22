@@ -1,6 +1,6 @@
 # Exercicio Hello HTML
 
-<p><a href="https://helloniel.netlify.app">Link Deploy 🌐</p>
+<h1><a href="https://helloniel.netlify.app" target="_blank">Link Deploy 🌐</h1>
 
 ---
 
