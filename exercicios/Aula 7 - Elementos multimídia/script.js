@@ -58,14 +58,12 @@ const filmes = [
 document.addEventListener('DOMContentLoaded', function () {
   const movieList = document.getElementById('movie-list');
 
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent); // a ia fez isso kkkk
-
   filmes.forEach(filme => {
     const movieDiv = document.createElement('div');
     movieDiv.classList.add('movie');
 
     movieDiv.innerHTML = `
-      
+
       <div class="movie-banner">
       <a href="${filme.link}" target="_blank">
         <img src="${filme.Image}" alt="${filme.Title}">
@@ -89,30 +87,22 @@ document.addEventListener('DOMContentLoaded', function () {
     const videoElement = movieDiv.querySelector('video');
 
     movieDiv.addEventListener('mouseover', () => {
-      if (!isMobile) {
-        imgElement.style.display = 'none';
-        videoElement.style.display = 'block';
-        videoElement.play();
-      }
+      imgElement.style.display = 'none';
+      videoElement.style.display = 'block';
+      videoElement.play();
     });
 
     movieDiv.addEventListener('mouseout', () => {
-      if (!isMobile) {
-        imgElement.style.display = 'block';
-        videoElement.style.display = 'none';
-        videoElement.pause();
-        videoElement.currentTime = 0;
-      }
+      imgElement.style.display = 'block';
+      videoElement.style.display = 'none';
+      videoElement.pause();
+      videoElement.currentTime = 0;
     });
 
-    movieDiv.addEventListener('click', () => { // a ia fez isso kkkk
-      if (isMobile) {
-        videoElement.muted = false;
+    movieDiv.addEventListener('click', () => {
+      videoElement.muted = !videoElement.muted;
+      if (!videoElement.muted) {
         videoElement.play();
-        videoElement.style.display = 'block';
-        imgElement.style.display = 'none';
-      } else {
-        window.open(filme.link, '_blank');
       }
     });
 
