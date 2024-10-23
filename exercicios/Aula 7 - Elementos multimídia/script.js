@@ -58,6 +58,8 @@ const filmes = [
 document.addEventListener('DOMContentLoaded', function () {
   const movieList = document.getElementById('movie-list');
 
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent); // a ia fez isso kkkk
+
   filmes.forEach(filme => {
     const movieDiv = document.createElement('div');
     movieDiv.classList.add('movie');
@@ -84,22 +86,30 @@ document.addEventListener('DOMContentLoaded', function () {
     const videoElement = movieDiv.querySelector('video');
 
     movieDiv.addEventListener('mouseover', () => {
-      imgElement.style.display = 'none';
-      videoElement.style.display = 'block';
-      videoElement.play();
+      if (!isMobile) {
+        imgElement.style.display = 'none';
+        videoElement.style.display = 'block';
+        videoElement.play();
+      }
     });
 
     movieDiv.addEventListener('mouseout', () => {
-      imgElement.style.display = 'block';
-      videoElement.style.display = 'none';
-      videoElement.pause();
-      videoElement.currentTime = 0;
+      if (!isMobile) {
+        imgElement.style.display = 'block';
+        videoElement.style.display = 'none';
+        videoElement.pause();
+        videoElement.currentTime = 0;
+      }
     });
 
-    movieDiv.addEventListener('click', () => {
-      videoElement.muted = !videoElement.muted;
-      if (!videoElement.muted) {
+    movieDiv.addEventListener('click', () => { // a ia fez isso kkkk
+      if (isMobile) {
+        videoElement.muted = false;
         videoElement.play();
+        videoElement.style.display = 'block';
+        imgElement.style.display = 'none';
+      } else {
+        window.open(filme.link, '_blank');
       }
     });
 
