@@ -65,9 +65,12 @@ document.addEventListener('DOMContentLoaded', function () {
     movieDiv.classList.add('movie');
 
     movieDiv.innerHTML = `
+      
       <div class="movie-banner">
+      <a href="${filme.link}" target="_blank">
         <img src="${filme.Image}" alt="${filme.Title}">
         <video src="${filme.trailer}" muted></video>
+      </a>
       </div>
       <div class="movie-info">
         <div class="movie-title">
