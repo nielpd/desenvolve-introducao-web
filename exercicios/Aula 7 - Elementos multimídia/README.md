@@ -1,4 +1,4 @@
-# Exercicio Elementos Textuais (Página de noticías com deploy)
+# Exercicio Elementos Multimídia (Página de noticías com deploy)
 
 <h1><a href="https://nielflix.netlify.app" target="_blank">Link Deploy 🌐</a></h1>
 
