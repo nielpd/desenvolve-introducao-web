@@ -96,6 +96,19 @@ document.addEventListener('DOMContentLoaded', function () {
       videoElement.currentTime = 0;
     });
 
+    movieDiv.addEventListener('touchstart', () => {
+      if (imgElement.style.display !== 'none') {
+        imgElement.style.display = 'none';
+        videoElement.style.display = 'block';
+        videoElement.play();
+      } else {
+        imgElement.style.display = 'block';
+        videoElement.style.display = 'none';
+        videoElement.pause();
+        videoElement.currentTime = 0;
+      }
+    });
+
     movieDiv.addEventListener('click', () => {
       videoElement.muted = !videoElement.muted;
       if (!videoElement.muted) {
