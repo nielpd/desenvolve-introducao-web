@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <a href="${filme.link}" target="_blank">
         <img src="${filme.Image}" alt="${filme.Title}">
         <video src="${filme.trailer}" muted></video>
-      </a>
+      
       </div>
       <div class="movie-info">
         <div class="movie-title">
@@ -80,6 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="movie-genre">
           <p>${filme.genres.join(', ')}</p>
         </div>
+      </a>
       </div>
     `;
 
@@ -97,13 +98,6 @@ document.addEventListener('DOMContentLoaded', function () {
       videoElement.style.display = 'none';
       videoElement.pause();
       videoElement.currentTime = 0;
-    });
-
-    movieDiv.addEventListener('click', () => {
-      videoElement.muted = !videoElement.muted;
-      if (!videoElement.muted) {
-        videoElement.play();
-      }
     });
 
     movieList.appendChild(movieDiv);
