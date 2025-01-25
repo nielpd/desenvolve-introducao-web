@@ -1,6 +1,6 @@
 # Trabalho Prático HTML (Página de tributo com deploy)
 
-<h1><a href="https://https://deftones-pd.netlify.app/" target="_blank">Link Deploy 🌐</a></h1>
+<h1><a href="https://deftones-pd.netlify.app/" target="_blank">Link Deploy 🌐</a></h1>
 
 ---
 
