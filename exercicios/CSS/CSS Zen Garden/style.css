@@ -1,0 +1,298 @@
+/* Aula 1 - Cores */
+:root {
+  --cor-primaria: #9c3d36;
+  --cor-secundaria: #e1b07e;
+  --cor-destaque: #4d5d53;
+  --cor-fundo: #f5f1e3;
+  --cor-texto: #2e2a26;
+  --cor-escura: #2e2a26;
+  --cor-clara: #f5f1e3;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+}
+
+/* Aula 2 - Estilização Textual */
+p {
+  text-align: justify;
+  margin-bottom: 1.5em;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--cor-primaria);
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: var(--cor-secundaria);
+}
+
+h3 {
+  font-size: 1.4rem;
+  color: var(--cor-destaque);
+}
+
+#zen-summary {
+  text-align: center;
+}
+
+#zen-supporting p {
+  line-height: 1.8;
+}
+
+abbr {
+  font-variant: small-caps;
+  color: var(--cor-destaque);
+}
+
+a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  color: var(--cor-secundaria);
+  text-decoration: underline;
+}
+
+/* Aula 3 - Box Model */
+
+#zen-intro {
+  height: auto;
+}
+
+#design-archives {
+  display: none;
+}
+
+header {
+  background-color: var(--cor-escura);
+  color: var(--cor-clara);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-left: 1em;
+  font-size: 1.8rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li {
+  text-align: center;
+}
+
+footer {
+  background-color: var(--cor-escura);
+  color: var(--cor-clara);
+  padding: 30px;
+  margin-top: 4%;
+  text-align: center;
+}
+
+footer a {
+  display: inline-block;
+  border: 2px solid var(--cor-clara);
+  padding: 0.7em;
+  margin: 10px;
+  text-align: center;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+footer a:hover {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-escura);
+}
+
+/* Aula 4 - Posicionamento */
+
+.page-wrapper {
+  position: relative;
+}
+
+.explanation {
+  width: 50%;
+  margin-right: 45%;
+  border-right: 1px solid var(--cor-escura);
+  padding-right: 2%;
+  margin-bottom: 100px;
+}
+
+.design-selection {
+  position: absolute;
+  top: 460px;
+  left: 62%;
+  width: 35%;
+  padding: 2%;
+}
+
+/* Aula 5 - Flex Box */
+
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer a {
+  width: 120px;
+  text-align: center;
+}
+
+.benefits-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--cor-escura);
+}
+
+.benefits-section .text {
+  width: 70%;
+}
+
+.benefits-section .title {
+  width: 30%;
+  text-align: center;
+}
+
+.participation-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid var(--cor-escura);
+}
+
+.participation-section .item {
+  width: 48%;
+  text-align: center;
+}
+
+/* Aula 6 - Pseudo-classes */
+
+a {
+  font-weight: bold;
+  color: var(--cor-destaque);
+}
+
+a:hover {
+  color: var(--cor-secundaria);
+}
+
+a:visited {
+  font-weight: normal;
+}
+
+.main p:first-of-type::first-letter {
+  font-size: 3em;
+  font-family: "Georgia", serif;
+  float: left;
+  margin-right: 5px;
+  color: var(--cor-primaria);
+}
+
+nav ul li {
+  border-top: 1px solid var(--cor-escura);
+}
+
+nav ul li:last-child {
+  border-bottom: 1px solid var(--cor-escura);
+}
+
+/* Aula 7 - Media Queries */
+
+@media (max-width: 768px) {
+  header {
+    padding: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .design-selection {
+    position: static;
+    width: 100%;
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  .explanation {
+    border-right: none;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .benefits-section,
+  .participation-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: none;
+    border-top: none;
+  }
+
+  #zen-intro {
+    height: auto;
+  }
+
+  p {
+    text-indent: 0;
+    margin-bottom: 1.2em;
+  }
+}
+
+@media print {
+  body {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12pt;
+  }
+
+  header {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+  }
+
+  footer {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+  }
+
+  footer a {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #design-archives,
+  .page-wrapper,
+  .explanation {
+    display: none;
+  }
+}
