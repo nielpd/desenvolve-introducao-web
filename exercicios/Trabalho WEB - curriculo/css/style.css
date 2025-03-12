@@ -1,0 +1,400 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  color: #121212;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  color: #121212;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  width: 100%;
+  padding: 16px;
+}
+
+header {
+  width: 100%;
+  max-width: 750px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hero img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.hero h1 {
+  font-size: 24px;
+}
+
+.hero p,
+.hero span {
+  font-size: 14px;
+  color: #444;
+}
+
+.hero-socials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+
+.hero-socials a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #1a73e8;
+  font-size: 14px;
+}
+
+.hero-socials i {
+  margin-right: 5px;
+}
+
+.hero-about h1 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.hero-about p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.education,
+.experience,
+.courses,
+.events {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.education h1,
+.experience h1 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #121212;
+}
+
+.education-content,
+.experience-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.education-card,
+.experience-card {
+  display: flex;
+  gap: 20px;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.education-card img,
+.experience-card img,
+.institution-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.education-info h2,
+.experience-info h2 {
+  font-size: 18px;
+  color: #030001;
+  font-weight: bold;
+}
+
+.education-info h3,
+.experience-info h3 {
+  font-size: 16px;
+  margin-top: 4px;
+  color: #333;
+}
+
+.education-info span,
+.experience-info span {
+  font-size: 14px;
+  color: #666;
+}
+
+.education-info p,
+.experience-info p {
+  font-size: 14px;
+  color: #444;
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+.courses h1 {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #121212;
+}
+
+.courses-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.course-card {
+  padding: 16px;
+}
+
+.course-info h2 {
+  font-size: 18px;
+  color: #030001;
+  margin-bottom: 6px;
+}
+
+.course-info h3 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.course-info span {
+  font-size: 14px;
+  color: #555;
+  padding: 4px 8px;
+  display: inline-block;
+}
+
+.events {
+  width: 100%;
+  max-width: 750px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.events h1 {
+  font-size: 24px;
+  margin-bottom: 24px;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.events-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.institution-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.institution-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.institution-header h2 {
+  font-size: 18px;
+  color: #030001;
+  font-weight: bold;
+}
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.event-card {
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.event-info {
+  margin-left: 16px;
+}
+
+.event-info h2 {
+  font-size: 18px;
+  color: #030001;
+  font-weight: bold;
+}
+
+.event-info h3 {
+  font-size: 16px;
+  color: #333;
+  margin-top: 4px;
+}
+
+.event-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+.event-info ul li {
+  padding-left: 8px;
+  display: inline;
+  margin-right: 10px;
+}
+
+.event-info ul li:not(:last-child)::after {
+  content: ", ";
+  color: #444;
+}
+
+footer {
+  background-color: #121212;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer .heart {
+  color: #e91e63;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .courses-content {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .education-card,
+  .experience-card,
+  .course-card {
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .education-info h2,
+  .experience-info h2,
+  .course-info h2 {
+    font-size: 20px;
+  }
+
+  .education-info h3,
+  .experience-info h3,
+  .course-info h3 {
+    font-size: 14px;
+  }
+
+  .education-info p,
+  .experience-info p,
+  .course-info p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero img {
+    width: 60px;
+    height: 60px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .courses h1,
+  .education h1,
+  .experience h1 {
+    font-size: 22px;
+  }
+
+  .institution-header img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .institution-header h2 {
+    font-size: 16px;
+  }
+
+  .event-info h2,
+  .event-info h3 {
+    font-size: 14px;
+  }
+
+  .event-info ul li {
+    font-size: 12px;
+  }
+}
