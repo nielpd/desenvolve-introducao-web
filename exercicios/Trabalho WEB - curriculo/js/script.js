@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Renderização da Educação
   const educationContent = document.querySelector(".education-content");
   education.forEach((edu) => {
     const card = document.createElement("div");
@@ -18,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
     educationContent.appendChild(card);
   });
 
-  // Renderização dos Cursos
   const coursesContent = document.querySelector(".courses-content");
   courses.forEach((course) => {
     const card = document.createElement("div");
@@ -35,7 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
     coursesContent.appendChild(card);
   });
 
-  // Renderização da Experiência
   const experienceContent = document.querySelector(".experience-content");
   experience.forEach((ex) => {
     const card = document.createElement("div");
@@ -92,7 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Ativa ou desativa o menu hamburguer
 const navbarToggle = document.getElementById("navbar-toggle");
 const navbarLinks = document.querySelector(".navbar-links");
 
@@ -100,13 +96,12 @@ navbarToggle.addEventListener("click", () => {
   navbarLinks.classList.toggle("active");
 });
 
-// Adiciona o comportamento de rolagem suave
 const links = document.querySelectorAll(".navbar-links a");
 
 links.forEach((link) => {
   link.addEventListener("click", function (e) {
     e.preventDefault();
-    const targetId = this.getAttribute("href").slice(1); // Obtém o ID da seção
+    const targetId = this.getAttribute("href").slice(1);
     const targetSection = document.getElementById(targetId);
 
     window.scrollTo({
@@ -114,7 +109,6 @@ links.forEach((link) => {
       behavior: "smooth",
     });
 
-    // Fecha o menu hamburguer em dispositivos móveis
     navbarLinks.classList.remove("active");
   });
 });
