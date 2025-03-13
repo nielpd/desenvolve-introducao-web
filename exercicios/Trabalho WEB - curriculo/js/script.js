@@ -91,3 +91,30 @@ document.addEventListener("DOMContentLoaded", () => {
     eventsContent.appendChild(institutionCard);
   });
 });
+
+// Ativa ou desativa o menu hamburguer
+const navbarToggle = document.getElementById("navbar-toggle");
+const navbarLinks = document.querySelector(".navbar-links");
+
+navbarToggle.addEventListener("click", () => {
+  navbarLinks.classList.toggle("active");
+});
+
+// Adiciona o comportamento de rolagem suave
+const links = document.querySelectorAll(".navbar-links a");
+
+links.forEach((link) => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute("href").slice(1); // Obtém o ID da seção
+    const targetSection = document.getElementById(targetId);
+
+    window.scrollTo({
+      top: targetSection.offsetTop,
+      behavior: "smooth",
+    });
+
+    // Fecha o menu hamburguer em dispositivos móveis
+    navbarLinks.classList.remove("active");
+  });
+});
